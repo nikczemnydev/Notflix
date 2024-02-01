@@ -1,4 +1,4 @@
-![image](https://github.com/nikczemnydev/Notflix/assets/136376818/45c2a996-8b15-47c4-8dcf-1daf6891ef69)
+![Untitled](https://github.com/nikczemnydev/Notflix/assets/136376818/b625a718-013c-4af3-b996-a5fa8d69cbd5)
 
 Notflix - not Netflix Movie Information App - is a demo product web application that provides a satisfying movie browsing experience. It accesses The Movie Database (TMDb) through their API to download information about the most popular movies. This information includes the movie titles, posters, average ratings, and short plot descriptions. Notflix displays this information in an organized way, with descriptions smoothly sliding over posters as the user hovers their mouse cursor over them. Additionally, Notflix has a search function that allows users to look up information about the titles they are interested in.
 
