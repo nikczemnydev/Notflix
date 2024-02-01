@@ -6,7 +6,7 @@ const main = document.getElementById('main')
 const form = document.getElementById('form')
 const search = document.getElementById('search')
 
-// Get initial list of movies
+// Fetch initial list of movies
 getMovies(API_URL)
 
 async function getMovies(url) {
@@ -17,14 +17,21 @@ async function getMovies(url) {
 }
 
 function showMovies(movies) {
+    // Clearing the main, because we don't want searched items
+    // to be added to the list but replace current items
     main.innerHTML = ''
 
+    // Take the fetched data, loop through it to extract needed info
     movies.forEach((movie) => {
         const { title, poster_path, vote_average, overview } = movie
 
+        // Create movie element to put it into DOM (same structure previously
+        // hardcoded in the HTML file)
         const movieEl = document.createElement('div')
         movieEl.classList.add('movie')
 
+        // The structure described above, with fields being replaced from
+        // hardcoded ones to populated by information from API
         movieEl.innerHTML = `
         <img src="${IMG_PATH + poster_path}"
             alt="${title}">
@@ -42,6 +49,7 @@ function showMovies(movies) {
     })
 }
 
+// Color movie ratings, the better the greener  : )
 function getClassByRate(vote) {
     if(vote >= 8) {
         return 'green'
@@ -52,6 +60,7 @@ function getClassByRate(vote) {
     }
 }
 
+// Add search functionality
 form.addEventListener('submit', (e) => {
     e.preventDefault()
 
