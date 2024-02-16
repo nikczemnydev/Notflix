@@ -1,3 +1,6 @@
+// I discourage from using my API key (registration takes 20 seconds and you
+// can get your own) as there is probably some access limit, so there is a 
+// chance this stops working if too many people start using same API key.  : )
 const API_URL = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=e0f9e97f7d0f3f1e12ccc286f0613614&page=1'
 const IMG_PATH = 'https://image.tmdb.org/t/p/w1280'
 const SEARCH_API = 'https://api.themoviedb.org/3/search/movie?api_key=e0f9e97f7d0f3f1e12ccc286f0613614&query="'
@@ -37,7 +40,7 @@ function showMovies(movies) {
             alt="${title}">
         <div class="movie-info">
             <h3>${title}</h3>
-            <span class="${getClassByRate(vote_average)}">${vote_average}</span>
+            <span class="${getClassByRate(vote_average)}">${vote_average.toFixed(2)}</span>
         </div>
         <div class="review">
             <h3>Plot</h3>
